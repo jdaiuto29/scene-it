@@ -27,8 +27,18 @@ $(document).ready(() => {
     
     $('form').submit(function(e){
         e.preventDefault();
-        var movieHTML = renderMovies(movieData);
-        $('.movies-container').html(movieHTML);
+        var searchString = $('#search-bar').val(); 
+        var urlEncodedSearchString = encodeURIComponent(searchString);
+        //var movieHTML = renderMovies(movieData);
+        //$('.movies-container').html(movieHTML);
+
+        fetch("https://www.omdbapi.com/?apikey=8534d2a7&s=" + urlEncodedSearchString)
+            .then(response => response.json())
+            .then(response => {
+                searchResponse = response.Search;
+                var movieHTML = renderMovies(response.Search);
+                $('.movies-container').html(movieHTML);
+            })
     });
     $('.movies-container').on("click", ".addButton", function(){ 
         var imdbID = $(this).data('id');
