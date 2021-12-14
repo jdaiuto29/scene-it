@@ -1,11 +1,37 @@
 body {
-	background-color: #B2E9FD;
+	background-color: black;
 }
 
 .header h2 {
 	color: #DC4247;
+	font-family: fantasy;
+}
+
+.display-2 {
+	position: relative;
+	right:5px;
 }
 
 .header p {
-	color: #50524F;
+	color: #DC4247;
+	letter-spacing: 1px;
+	font-family:fantasy;
+}
+
+.movie-info {
+	background: white;
+	padding: 15px;
+	text-align:start;	
+}
+
+#movie-year {
+	background: gray;
+	color: white;
+	font-size: 12px;
+	font-weight: bold;
+	border-radius: 5px;
+	width: 25%;
+	height: 20%;
+	text-align: center;
+	
 }
