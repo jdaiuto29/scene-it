@@ -12,7 +12,6 @@ function renderMovies(watchlist) {
     <div class = 'd-flex justify-content-between'><h6>${currentMovie.Title}</h6>
     <div id = 'movie-year'>${currentMovie.Year}</div>
     </div>
-    <div class = "mt-3"><button class = 'add-movie btn btn-primary btn-sm d-flex justify-content-start' data-imdbid= ${currentMovie.imdbID}>Remove Movie</button></div>
     </div>
     </div>
     `
