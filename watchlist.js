@@ -3,7 +3,7 @@ let watchlist = JSON.parse(localStorage.getItem('watchlist'));
 
 function renderMovies(watchlist) {
 
-    const savedMovieArray = watchlist.map(function (currentMovie) {
+    const savedMovieArray = watchlist.map(function(currentMovie) {
 
         return `
     <div class = 'col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4' id = 'movie-div'>
